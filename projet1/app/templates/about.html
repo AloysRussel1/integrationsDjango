@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Site de Menuiserie</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <div id="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="LOGO"></a>
+            </div>
+            <ul id="navigation">
+                <li><a href="{% url 'home' %}">Accueil</a></li>
+                <li class="selected"><a href="{% url 'about' %}">À propos</a></li>
+                <li><a href="{% url 'gallery' %}">Galerie</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contents">
+        <div>
+            <div class="body" id="about">
+                <div id="sidebar">
+                    <div class="body">
+                        <img src="{% static 'images/resort.png' %}" alt="Img">
+                        <div class="contact">
+                            <p>
+                                Pour les commandes et les demandes, veuillez appeler : <b>760-962-9541</b> ou vous pouvez nous rendre visite à : <b>4885 Wilson Street<br> Victorville, CA 92392</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="main">
+                    <h1>À propos</h1>
+                    <h4>Nous avons des modèles gratuits pour tout le monde</h4>
+                    <p>
+                        Nos modèles de site web sont créés avec inspiration, vérifiés pour leur qualité et leur originalité, et minutieusement découpés et codés. De plus, ils sont absolument gratuits ! Vous pouvez en faire beaucoup avec eux. Vous pouvez les modifier. Vous pouvez les utiliser pour concevoir des sites web pour des clients, tant que vous acceptez les <a href="http://www.freewebsitetemplates.com/about/terms/">Conditions d'utilisation</a>. Vous pouvez même supprimer tous nos liens si vous le souhaitez.
+                    </p>
+                    <h4>Nous avons plus de modèles pour vous</h4>
+                    <p>
+                        Vous cherchez plus de modèles ? Parcourez tous nos <a href="http://www.freewebsitetemplates.com/">Modèles de Site Web Gratuits</a> et trouvez ce que vous cherchez. Mais si vous ne trouvez aucun modèle de site que vous pouvez utiliser, vous pouvez essayer notre service de <a href="http://www.freewebsitetemplates.com/freewebdesign/">Design Web Gratuit</a> et nous parler de votre besoin. Peut-être que vous recherchez quelque chose de différent, quelque chose de spécial. Et nous adorons le défi de faire quelque chose de différent et de spécial.
+                    </p>
+                    <h4>Faites partie de notre communauté</h4>
+                    <p>
+                        Si vous rencontrez des problèmes et des préoccupations concernant ce modèle de site web, rejoignez la discussion <a href="http://www.freewebsitetemplates.com/forums/">sur notre forum</a> et rencontrez d'autres personnes dans la communauté qui partagent les mêmes intérêts que vous.
+                    </p>
+                    <h4>Détails du modèle</h4>
+                    <p>
+                        Version design 7<br> Version code 2<br><br> Détails du modèle de site, discussion et mises à jour pour ce <a href="http://www.freewebsitetemplates.com/discuss/woodworkingwebsitetemplate/">Modèle de Site de Menuiserie</a>.<br><br> Design du modèle de site par <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a>.<br><br> <span>N'hésitez pas à supprimer tout ou partie du texte et des liens de cette page et à les remplacer par votre propre contenu À propos.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <div id="links">
+                <div class="showroom">
+                    <h4>Visitez notre Salle d'Exposition</h4>
+                    <a href="{% url 'gallery' %}"><img src="{% static 'images/show-room.png' %}" alt="Img"></a>
+                    <p>
+                        4885 Wilson Street<br> Victorville, CA 92392<br><br> 760-962-9541<br><br> <a href="mailto:info@carvedcreations.com">info@carvedcreations.com</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Articles de Blog Récents</h4>
+                    <ul class="posts">
+                        <li>
+                            <span class="time">16 avr</span>
+                            <p><a href="{% url 'blog' %}">Le Maître de la Sculpture &amp; Propriétaire</a> Peut-être que vous recherchez quelque chose de différent, quelque chose de spécial.</p>
+                        </li>
+                        <li>
+                            <span class="time">15 avr</span>
+                            <p><a href="{% url 'blog' %}">Hôtels 5 Étoiles Que Nous Fournissons</a> Et nous aimons le défi de faire quelque chose de différent et de spécial.</p>
+                        </li>
+                        <li>
+                            <span class="time">14 avr</span>
+                            <p><a href="{% url 'blog' %}">Comment Choisir le Bon Mobilier Pour Vous</a> De plus, ils sont absolument gratuits ! Vous pouvez en faire beaucoup avec eux.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form action="#" method="post" id="newsletter">
+                        <h4>Rejoignez notre Newsletter</h4>
+                        <input type="text" value="Entrez votre adresse e-mail ici pour des mises à jour" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+                        <input type="submit" value="S'inscrire" class="btn2">
+                    </form>
+                    <div id="connect">
+                        <h4>Réseaux Sociaux</h4>
+                        <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a>
+                        <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
+                        <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="navigation">
+                <li><a href="{% url 'home' %}">Accueil</a></li>
+                <li><a href="{% url 'about' %}">À propos</a></li>
+                <li><a href="{% url 'gallery' %}">Galerie</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <p id="footnote">© Copyright 2023. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Wood Working Website Template</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <div id="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="LOGO"></a>
+            </div>
+            <ul id="navigation">
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li class="selected">
+                    <a href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contents">
+        <div>
+            <div class="body" id="blog">
+                <div id="sidebar">
+                    <div>
+                        <h5>Featured Blogs</h5>
+                        <ul class="posts">
+                            <li>
+                                <span class="time">Apr 16</span>
+                                <p>
+                                    <a href="{% url 'blog' %}">Tips On Arranging Furniture</a> This website template has been designed by Free Website Templates for you, for free.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time">Apr 15</span>
+                                <p>
+                                    <a href="{% url 'blog' %}">How To Maintain Wooden Furniture</a> And we love the challenge of doing something different and something special.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time">Apr 16</span>
+                                <p>
+                                    <a href="{% url 'blog' %}">The Newest Innovation On Wooden</a> You can replace all this text with your own text. What’s more, they’re absolutely free!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Blog Categories</h5>
+                        <ul>
+                            <li>
+                                <a href="{% url 'blog' %}">Carved Creations</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">Furniture</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">Maintenance and Cleaning</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">Innovations</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">Modern And New</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">Classic and Timeless</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Archives</h5>
+                        <ul>
+                            <li>
+                                <a href="{% url 'blog' %}">March 2023</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">February 2023</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">January 2023</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">December 2023</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">November 2023</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">October 2023</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main">
+                    <div class="viewer">
+                        <span class="time">Apr 16</span>
+                        <h3><a href="">CC's Carving Master and Founder</a></h3>
+                        <p class="info">
+                            Posted By: <a href="{% url 'blog' %}">Admin</a> in <a href="{% url 'blog' %}">Production</a>, <a href="{% url 'home' %}">Carved Creations</a>
+                        </p>
+                        <div class="frame">
+                            <img src="{% static 'images/carving-master.jpg' %}" alt="Img">
+                        </div>
+                        <p>
+                            This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+                        </p>
+                        <a href="{% url 'blog' %}" class="more">Read More</a> <a href="{% url 'blog' %}" class="comments">0 Comments</a>
+                    </div>
+
+                    <!-- Ajout de votre nouvel article -->
+                    <div class="viewer">
+                        <span class="time">Apr 16</span>
+                        <h3><a href="">Conseils pour Arranger le Mobilier</a></h3>
+                        <p class="info">
+                            Posted By: <a href="{% url 'blog' %}">Admin</a> in <a href="{% url 'blog' %}">Furniture</a>
+                        </p>
+                        <p>
+                            Ce modèle de site web a été conçu pour vous, gratuitement. Vous pouvez remplacer tout ce texte par votre propre texte.
+                        </p>
+                        <a href="" class="more">Lire la suite</a> <a href="{% url 'blog' %}" class="comments">0 Comments</a>
+                    </div>
+
+                    <div id="pagination">
+                        <a href="{% url 'gallery' %}" class="previous">Previous</a>
+                        <a href="{% url 'gallery' %}" class="next">Next</a>
+                        <ul>
+                            <li>
+                                Pages:
+                            </li>
+                            <li class="selected">
+                                <a href="{% url 'gallery' %}">1</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'gallery' %}">2</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'gallery' %}">3</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'gallery' %}">4</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div id="links">
+                <div class="showroom">
+                    <h4>Visit our Showroom</h4>
+                    <a href="{% url 'gallery' %}"><img src="{% static 'images/show-room.png' %}" alt="Showroom"></a>
+                    <p>4885 Wilson Street<br> Victorville, CA 92392<br> 760-962-9541<br><br> <a href="{% url 'index' %}">info@carvedcreations.com</a></p>
+                </div>
+                <div>
+                    <h4>Recent Blog Posts</h4>
+                    <ul class="posts">
+                        <li>
+                            <span class="time">Apr 16</span>
+                            <p><a href="{% url 'blog' %}">The Carving Master &amp; Owner</a> Maybe you’re looking for something different, something special.</p>
+                        </li>
+                        <li>
+                            <span class="time">Apr 15</span>
+                            <p><a href="{% url 'blog' %}">5 Star Hotels We Supply</a> And we love the challenge of doing something different and special.</p>
+                        </li>
+                        <li>
+                            <span class="time">Apr 14</span>
+                            <p><a href="{% url 'blog' %}">How To Pick The Right Furniture For You</a> What’s more, they’re absolutely free! You can do a lot with them.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form action="#" method="post" id="newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <input type="text" value="Enter Email Address Here For Updates" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}">
+                        <input type="submit" value="Sign up" class="btn2">
+                    </form>
+                    <div id="connect">
+                        <h4>Social Media</h4>
+                        <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a>
+                        <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
+                        <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="navigation">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <p id="footnote">© Copyright 2023. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
