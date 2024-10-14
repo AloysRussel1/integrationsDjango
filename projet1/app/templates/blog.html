@@ -8,30 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 <body>
-    <div id="header">
-        <div>
-            <div id="logo">
-                <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="LOGO"></a>
-            </div>
-            <ul id="navigation">
-                <li>
-                    <a href="{% url 'home' %}">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'about' %}">About</a>
-                </li>
-                <li>
-                    <a href="{% url 'gallery' %}">Gallery</a>
-                </li>
-                <li class="selected">
-                    <a href="{% url 'blog' %}">Blog</a>
-                </li>
-                <li>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    {% include 'header.html' %}
     <div id="contents">
         <div>
             <div class="body" id="blog">
@@ -160,54 +137,6 @@
             </div>
         </div>
     </div>
-    <div id="footer">
-        <div>
-            <div id="links">
-                <div class="showroom">
-                    <h4>Visit our Showroom</h4>
-                    <a href="{% url 'gallery' %}"><img src="{% static 'images/show-room.png' %}" alt="Showroom"></a>
-                    <p>4885 Wilson Street<br> Victorville, CA 92392<br> 760-962-9541<br><br> <a href="{% url 'index' %}">info@carvedcreations.com</a></p>
-                </div>
-                <div>
-                    <h4>Recent Blog Posts</h4>
-                    <ul class="posts">
-                        <li>
-                            <span class="time">Apr 16</span>
-                            <p><a href="{% url 'blog' %}">The Carving Master &amp; Owner</a> Maybe you’re looking for something different, something special.</p>
-                        </li>
-                        <li>
-                            <span class="time">Apr 15</span>
-                            <p><a href="{% url 'blog' %}">5 Star Hotels We Supply</a> And we love the challenge of doing something different and special.</p>
-                        </li>
-                        <li>
-                            <span class="time">Apr 14</span>
-                            <p><a href="{% url 'blog' %}">How To Pick The Right Furniture For You</a> What’s more, they’re absolutely free! You can do a lot with them.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <form action="#" method="post" id="newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <input type="text" value="Enter Email Address Here For Updates" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}">
-                        <input type="submit" value="Sign up" class="btn2">
-                    </form>
-                    <div id="connect">
-                        <h4>Social Media</h4>
-                        <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a>
-                        <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
-                        <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a>
-                    </div>
-                </div>
-            </div>
-            <ul class="navigation">
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-            </ul>
-            <p id="footnote">© Copyright 2023. All Rights Reserved.</p>
-        </div>
-    </div>
+    {% include 'footer.html' %}
 </body>
 </html>
